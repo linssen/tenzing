@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tensig style guide.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/build/styles/main.css">
+</head>
+<body>
+    <h1>Tensig style guide</h1>
+
+    <nav>
+        {{#each components}}
+            <a href="#{{slug}}">{{#if title}}{{title}}{{else}}{{slug}}{{/if}}</a>
+        {{/each}}
+    </nav>
+
+    {{#each components}}
+        <div class="tnsg-Component">
+            <h2 class="tnsg-Component-title">
+                {{#if title}}{{title}}{{else}}{{slug}}{{/if}}
+            </h2>
+            {{#if details}}
+                <div class="tnsg-Component-detail">
+                    {{{details}}}
+                </div>
+            {{/if}}
+            <div class="tnsg-Component-code language-markup">
+                <pre><code>{{{code}}}</code></pre>
+            </div>
+            <div class="tnsg-Component-rendered">
+                {{{rendered}}}
+            </div>
+        </div>
+    {{/each}}
+
+    <script src="/build/scripts/main.js"></script>
+</body>
+</html>

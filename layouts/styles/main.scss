@@ -1,0 +1,29 @@
+@import 'prism', 'prism-okaidia';
+
+.tnsg-Component {
+    margin-bottom: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid #efefef;
+
+    &:nth-of-type(1) {
+        border-top: 1px solid #ddd;
+    }
+}
+
+.tnsg-Component-title {
+    font-size: 24px;
+    color: #666;
+    margin: 0 0 16px 0;
+}
+
+.tnsg-Component-detail {
+    background: #efefef;
+    border: 1px solid #ddd;
+    padding: 16px;
+    font-family: sans-serif;
+}
+
+.tnsg-Component-code {
+    font-size: 12px;
+    -webkit-font-smoothing: none;
+}

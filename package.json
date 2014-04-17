@@ -1,0 +1,17 @@
+{
+  "name": "tensig",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-styleguide": "git+ssh://git@github.com:linssen/gulp-styleguide.git",
+    "gulp-clean": "^0.2.4",
+    "gulp": "^3.6.1",
+    "gulp-sass": "^0.7.1"
+  }
+}
