@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp-styleguide": "git+ssh://git@github.com:linssen/gulp-styleguide.git",
+    "gulp-tensig": "git+ssh://git@github.com:linssen/gulp-tensig.git",
     "gulp-clean": "^0.2.4",
     "gulp": "^3.6.1",
     "gulp-sass": "^0.7.1"
