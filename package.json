@@ -1,12 +1,16 @@
 {
   "name": "tensig",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "The style guider",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Wil Linssen <wil@linssen.me> (http://linssen.me)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/linssen/tensig"
+  },
   "license": "ISC",
   "devDependencies": {
     "gulp-tensig": "git+ssh://git@github.com:linssen/gulp-tensig.git",
