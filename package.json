@@ -16,6 +16,7 @@
     "gulp-tensig": "git+ssh://git@github.com:linssen/gulp-tensig.git",
     "gulp-clean": "^0.2.4",
     "gulp": "^3.6.1",
-    "gulp-sass": "^0.7.1"
+    "gulp-sass": "^0.7.1",
+    "gulp-concat": "^2.2.0"
   }
 }
