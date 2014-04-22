@@ -1,29 +1,78 @@
-@import 'prism', 'prism-okaidia';
+@import 'prism';
 
+$type--sans: 'Droid Sans', sans-serif;
+$type--mono: 'Droid Sans Mono', monospace;
+$type--serif: 'Droid Serif', serif;
+$color--accent: #f8f8f8;
+$color--border: #dddddd;
+$color--type: #666666;
+
+$baseline: 6px;
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+.tnsg-PageTitle {
+    color: $color--type;
+    font-size: $baseline * 4;
+    font-family: $type--serif;
+    padding: $baseline * 2;
+    margin: 0;
+    border-bottom: 1px solid $color--border;
+    background: $color--accent;
+}
+.tnsg-NavList {
+    display: none;
+}
 .tnsg-Component {
-    margin-bottom: 40px;
-    padding: 40px 0;
-    border-bottom: 1px solid #efefef;
+    margin-bottom: $baseline * 4;
+}
+.tnsg-Component-title {
+    font-size: $baseline * 3;
+    color: $color--type;
+    margin: -1px 0 $baseline * 3 0;
+    padding: $baseline $baseline * 2;
+    border-top: 1px solid $color--border;
+    border-bottom: 1px solid $color--border;
+    background: $color--accent;
+    font-family: $type--sans;
 
-    &:nth-of-type(1) {
-        border-top: 1px solid #ddd;
+    a {
+        opacity: 0;
+    }
+    &:hover a,
+    &:active a {
+        opacity: 1;
+        color: $color--type;
+        text-decoration: none;
     }
 }
-
-.tnsg-Component-title {
-    font-size: 24px;
-    color: #666;
-    margin: 0 0 16px 0;
-}
-
 .tnsg-Component-detail {
-    background: #efefef;
-    border: 1px solid #ddd;
-    padding: 16px;
-    font-family: sans-serif;
-}
+    border-bottom: 1px solid $color--border;
+    margin: 0 0 $baseline * 3 0;
+    padding: 0 $baseline * 2 $baseline * 1 $baseline * 2;
+    font-family: $type--serif;
+    font-size: $baseline * 2;
 
+    p,
+    code,
+    blockquote {
+        margin: 0 0 $baseline * 2 0;
+    }
+}
 .tnsg-Component-code {
-    font-size: 12px;
-    -webkit-font-smoothing: none;
+    font-size: $baseline * 2;
+    font-family: $type--mono;
+
+    pre {
+        text-shadow: none;
+        background: $color--accent;
+
+    }
+}
+.tnsg-Component-rendered {
+    padding: 0 $baseline * 2;
+    margin: $baseline * 3 0;
 }
