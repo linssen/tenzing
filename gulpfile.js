@@ -1,10 +1,10 @@
-var clean, concat, gulp, sass, tensig;
+var clean, concat, gulp, sass, tenzing;
 
 clean = require('gulp-clean');
 concat = require('gulp-concat');
 gulp = require('gulp');
 sass = require('gulp-sass');
-tensig = require('gulp-tensig');
+tenzing = require('gulp-tenzing');
 
 gulp.task('styles', ['clean'], function () {
     return gulp.src(['./layouts/styles/main.scss', './components/styles/*.scss'])
@@ -24,10 +24,10 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-gulp.task('tensig', ['clean'], function () {
+gulp.task('tenzing', ['clean'], function () {
     return gulp.src('./layouts/templates/*.html')
-        .pipe(tensig())
+        .pipe(tenzing())
         .pipe(gulp.dest('./build'));
 });
 
-gulp.task('default', ['styles', 'scripts', 'tensig']);
+gulp.task('default', ['styles', 'scripts', 'tenzing']);

@@ -1,5 +1,5 @@
 {
-  "name": "tensig",
+  "name": "tenzing",
   "version": "0.0.1",
   "description": "The style guider",
   "main": "index.js",
@@ -9,11 +9,11 @@
   "author": "Wil Linssen <wil@linssen.me> (http://linssen.me)",
   "repository": {
     "type": "git",
-    "url": "http://github.com/linssen/tensig"
+    "url": "http://github.com/linssen/tenzing"
   },
   "license": "ISC",
   "devDependencies": {
-    "gulp-tensig": "git+ssh://git@github.com:linssen/gulp-tensig.git",
+    "gulp-tenzing": "git+ssh://git@github.com:linssen/gulp-tenzing.git",
     "gulp-clean": "^0.2.4",
     "gulp": "^3.6.1",
     "gulp-sass": "^0.7.1",

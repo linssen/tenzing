@@ -1,1 +1,1 @@
-# Tensig
+# Tenzing
