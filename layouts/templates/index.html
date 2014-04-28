@@ -15,8 +15,14 @@
         {{/each}}
     </nav>
 
+    <nav class="tnsg-GroupList">
+        {{#each groups}}
+            <a href="#/group/{{slug}}">{{title}}</a>
+        {{/each}}
+    </nav>
+
     {{#each components}}
-        <div class="tnsg-Component">
+        <div class="tnsg-Component {{#if group}}tnsg-Group tnsg-Group-{{groupSlug}}{{/if}}">
             <h2 class="tnsg-Component-title" id="tnsg-{{slug}}">
                 {{#if title}}{{title}}{{else}}{{slug}}{{/if}}
                 <a class="tnsg-Component-permalink" href="#tnsg-{{slug}}">¶</a>

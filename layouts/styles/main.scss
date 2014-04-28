@@ -76,3 +76,11 @@ html {
     padding: 0 $baseline * 2;
     margin: $baseline * 3 0;
 }
+
+.tnsg-Group {
+    display: none;
+
+    &.on {
+        display: block;
+    }
+}
