@@ -13,7 +13,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "gulp-tenzing": "git+ssh://git@github.com:linssen/gulp-tenzing.git",
+    "gulp-tenzing": "^0.0.3",
     "gulp-clean": "^0.2.4",
     "gulp": "^3.6.1",
     "gulp-sass": "^0.7.1",
