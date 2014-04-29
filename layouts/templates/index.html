@@ -22,7 +22,7 @@
     </nav>
 
     {{#each components}}
-        <div class="tnsg-Component {{#if group}}tnsg-Group tnsg-Group-{{groupSlug}}{{/if}}">
+        <div class="tnsg-Component {{#if group}}tnsg-Group tnsg-Group-{{group.slug}}{{/if}}">
             <h2 class="tnsg-Component-title" id="tnsg-{{slug}}">
                 {{#if title}}{{title}}{{else}}{{slug}}{{/if}}
                 <a class="tnsg-Component-permalink" href="#tnsg-{{slug}}">¶</a>
