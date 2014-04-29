@@ -2,7 +2,7 @@
     'use strict';
 
     function Router () {
-        this.route = /^\/group\/(\w+)\/?/i;
+        this.route = /^\/group\/([\w-]+)\/?/i;
         this.groupElems = document.getElementsByClassName('tnsg-Group');
         window.addEventListener('hashchange', this.changeGroup.bind(this));
         this.changeGroup();
