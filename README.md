@@ -16,4 +16,4 @@ $ gulp
 
 There is an example herein, and it will produce something akin to this:
 
-![artboard 1](https://cloud.githubusercontent.com/assets/67624/2766941/91c8b9b8-ca33-11e3-8f75-83d8bc82f9cd.png)
+![Screeny](https://cloud.githubusercontent.com/assets/67624/2861584/6853c78e-d1e1-11e3-8558-9e9bd8a4bc8c.png)
