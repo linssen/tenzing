@@ -11,7 +11,7 @@ paths = {
     styles: ['./layouts/styles/main.scss', './components/styles/*.scss'],
     scripts: ['./layouts/scripts/*.js'],
     tenzing: {
-        layouts: './layouts/templates/**/*.html',
+        layouts: './layouts/templates/',
         components: './components/templates/**/*.html'
     }
 };
@@ -36,7 +36,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('tenzing', ['clean'], function () {
-    return gulp.src(paths.tenzing.layouts)
+    return gulp.src(paths.tenzing.components)
         .pipe(tenzing())
         .pipe(gulp.dest('./build'));
 });
