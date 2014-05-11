@@ -7,40 +7,48 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body class="tnsg-Body">
-    <h1 class="tnsg-PageTitle">tenzing</h1>
+    <div class="tnsg-Wrapper">
+        <header class="tnsg-PageTitle">
+            <h1>tenzing</h1>
+            <button class="tnsg-Nav-toggle">Toggle navigation</button>
+        </header>
 
-    <nav class="tnsg-NavList">
-        {{#each components}}
-            <a href="#tnsg-{{slug}}">{{#if title}}{{title}}{{else}}{{slug}}{{/if}}</a>
-        {{/each}}
-    </nav>
-
-    <nav class="tnsg-GroupList">
-        {{#each groups}}
-            <a href="#/group/{{slug}}">{{title}}</a>
-        {{/each}}
-    </nav>
-
-    {{#each components}}
-        <div class="tnsg-Component {{#if group}}tnsg-Group tnsg-Group-{{group.slug}}{{/if}}">
-            <h2 class="tnsg-Component-title" id="tnsg-{{slug}}">
-                {{#if title}}{{title}}{{else}}{{slug}}{{/if}}
-                <a class="tnsg-Component-permalink" href="#tnsg-{{slug}}">¶</a>
-            </h2>
-            {{#if details}}
-                <div class="tnsg-Component-detail">
-                    {{{details}}}
-                </div>
-            {{/if}}
-            <div class="tnsg-Component-rendered">
-                <span class="tnsg-Component-rendered-label">Example</span>
-                {{{code}}}
-            </div>
-            <div class="tnsg-Component-code language-markup">
-                <pre><code>{{{highlighted}}}</code></pre>
-            </div>
+        <div class="tnsg-Nav">
+            <nav class="tnsg-Nav-items--collapsed">
+                {{#each groups}}
+                    <a href="#tnsg-Group-{{slug}}">{{title}}</a>
+                {{/each}}
+            </nav>
         </div>
-    {{/each}}
+
+        <div class="tnsg-Content">
+            {{#each groups}}
+                <div id="tnsg-Group-{{slug}}" class="tnsg-Group">
+                    <h2 class="tnsg-Group-title">{{title}}</h2>
+                    {{#each components}}
+                        <div id="Component-{{slug}}" class="tnsg-Component">
+                            <h3 class="tnsg-Component-title" id="tnsg-{{slug}}">
+                                {{#if title}}{{title}}{{else}}{{slug}}{{/if}}
+                                <a class="tnsg-Component-permalink" href="#tnsg-{{slug}}">¶</a>
+                            </h3>
+                            {{#if details}}
+                                <div class="tnsg-Component-detail">
+                                    {{{details}}}
+                                </div>
+                            {{/if}}
+                            <div class="tnsg-Component-rendered">
+                                <span class="tnsg-Component-rendered-label">Example</span>
+                                {{{code}}}
+                            </div>
+                            <div class="tnsg-Component-code language-markup">
+                                <pre><code>{{{highlighted}}}</code></pre>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            {{/each}}
+        </div>
+    </div>
 
     <script src="/scripts/main.js"></script>
 </body>

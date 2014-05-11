@@ -9,31 +9,101 @@ $color--type: #666666;
 
 $baseline: 6px;
 
+@mixin prefixer($property, $value) {
+    @each $prefix in webkit moz ms o {
+        -#{$prefix}-#{$property}: $value;
+    }
+    #{$property}: $value;
+}
+
 body,
 html {
     padding: 0;
     margin: 0;
+    height: 100%;
+}
+.tnsg-Body {
+}
+.tnsg-Wrapper {
+    @include prefixer(transition, 200ms all ease-in-out);
+
+    &.tnsg-ToggleActive {
+        @include prefixer(transform, translate3D(200px, 0, 0));
+    }
 }
 .tnsg-PageTitle {
     color: $color--type;
     font-size: $baseline * 4;
     font-family: $type--serif;
     padding: $baseline * 2;
-    margin: 0;
+    padding-left: 2em;
     border-bottom: 1px solid $color--border;
-    background: $color--accent;
+    background: transparentize($color--accent, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    line-height: 1;
+
+    h1 {
+        margin: 0;
+        font-size: 1em;
+    }
 }
-.tnsg-NavList {
-    display: none;
+.tnsg-Nav {
+    display: block;
+    width: 200px;
+    background: #333;
+    color: white;
+    height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: -200px;
+    font-family: $type--sans;
+    font-size: $baseline * 2;
+    border-right: 1px solid #000;
+
+    a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: $baseline;
+
+        &:hover,
+        &:focus {
+            background: $color--accent;
+        }
+    }
+}
+.tnsg-Nav-toggle {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #333;
+    text-indent: -999em;
+    overflow: hidden;
+    width: $baseline * 8;
+    height: $baseline * 8;
+}
+.tnsg-Content {
+    border-top: $baseline * 8 solid rgba(255,255,255,0);
+    margin: 0 0 $baseline * 3 0;
+    padding: 0 $baseline * 2;
+    box-sizing: border-box;
+    width: 100%;
 }
 .tnsg-Component {
     margin-bottom: $baseline * 4;
 }
-.tnsg-Component-title {
+.tnsg-Group-title {
     font-size: $baseline * 3;
     color: $color--type;
-    margin: -1px 0 $baseline * 3 0;
     padding: $baseline $baseline * 2;
+    margin: -1px $baseline * -2 $baseline * 3 $baseline * -2;
+    line-height: 1;
     border-top: 1px solid $color--border;
     border-bottom: 1px solid $color--border;
     background: $color--accent;
@@ -49,10 +119,18 @@ html {
         text-decoration: none;
     }
 }
+.tnsg-Component-title {
+    margin: 0 0 $baseline * 3 0;
+    font-family: $type--sans;
+    font-weight: 700;
+    font-size: $baseline * 2;
+    color: $color--type;
+}
 .tnsg-Component-detail {
-    margin: 0 $baseline * 2 $baseline * 3 $baseline * 2;
+    margin: 0 0 $baseline * 3 0;
     font-family: $type--serif;
     font-size: $baseline * 2;
+    color: $color--type;
 
     p,
     code,
@@ -63,7 +141,7 @@ html {
 .tnsg-Component-code {
     font-size: $baseline * 2;
     font-family: $type--mono;
-    margin: 0 $baseline * 2 $baseline * 3 $baseline * 2;
+    margin: 0 0 $baseline * 3 0;
 
     pre {
         text-shadow: none;
@@ -79,7 +157,7 @@ html {
     }
 }
 .tnsg-Component-rendered {
-    margin: 0 $baseline * 2 $baseline * 3 $baseline * 2;
+    margin: 0 0 $baseline * 3 0;
     padding: $baseline * 2;
     padding-top: $baseline * 5;
     border: 1px solid $color--border;
@@ -97,9 +175,5 @@ html {
     display: block;
 }
 .tnsg-Group {
-    display: none;
 
-    &.on {
-        display: block;
-    }
 }
